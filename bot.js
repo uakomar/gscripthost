@@ -20,12 +20,10 @@ function doPost(e) {
         HtmlService.createHtmlOutput("Ignored");
       }
   
-      /*
-      var response = callHuggingFace(data.message.text);
-      sendMessage(chatId, response);
-      */
+      var response = "привіт, твоє повідомлення було: " + data.message.text;
+      /*var response = callHuggingFace(data.message.text);*/
   
-      sendMessage(chatId, "привіт");
+      sendMessage(chatId, response);
     }
     return HtmlService.createHtmlOutput("OK");
   }
